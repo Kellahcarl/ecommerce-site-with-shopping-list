@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>e-commerce</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://previews.123rf.com/images/worraset/worraset1702/worraset170200111/72001278-abstract-hand-draw-women-sleep-on-bed-illustration-cartoon-watercolor-on-paper-texture-style.jpg" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>                    
+                        <li class="cart">
+                            <a href="cart.html"><i class="fa" style="font-size:24px">&#xf07a;</i></a>
+                            <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+                        </li>
+                    </ul>
+                    </nav>
+                </nav>
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-2">
+                    <h1> XYZ BED STORE<br> A Group Of Companies </h1>
+                    <p>Get the best of all <br>beds here</p>
+                    <a href="" class="btn">explore now &#8594 </a>
+                </div>
+                <div class="col-2">
+                    <img src="https://images.unsplash.com/photo-1633836331520-e35c668f1f9d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slideshow container -->
+    <div class="carousel__holder">
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="https://images.unsplash.com/photo-1634253539580-d448fa5c4a1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="https://images.unsplash.com/photo-1634253539572-83b8c0059d86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="https://images.unsplash.com/photo-1634344656611-0773d8dbbe2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=869&q=80" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://images.unsplash.com/photo-1634382734199-e837de37271f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=875&q=80" style="width:100%">
+                <div class="text">Caption Three</div>
+              </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+    </div>
+
+<!-------featured categories ------->
+<div class="small-container">
+    <h2 class="title">featured products</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1634253539596-a4c873ae0f26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" >
+            <h3>Brown Bed</h3>
+            <h3>ksh 5000</h3>
+            <a class="add-cart cart2" href="#">Add cart</a>
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1633809365429-2fa048a02119?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80" >
+            <h3>White Big Bed</h3>
+            <h3>ksh 10000</h3>
+            <a class="add-cart cart3" href="#">Add cart</a>
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1633605015660-b0f2dbad3bf2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80" >
+            <h3>master ensuite</h3>
+            <h3>ksh 8000</h3>
+            <a class="add-cart cart4" href="#">Add cart</a>
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1633944095397-878622ebc01c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80" alt="no picture">
+            <h3>White bed</h3>
+            <h3>ksh 7500</h3>
+            <a class="add-cart cart5" href="#">Add cart</a>            <p>$50</p>
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1633893669258-938b9aac9006?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="no picture">
+            <h3>massage bed</h3>
+            <h3>ksh 3000</h3>
+            <a class="add-cart cart6" href="#">Add cart</a>
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1633505650701-6104c4fc72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80" alt="no picture">
+            <h4>extra-white bed</h4>
+            <div class="rating">
+            <h3>lie bed</h3>
+            <h3>ksh 25000</h3>
+            <a class="add-cart cart7" href="#">Add cart</a>   
+        </div>
+    </div>
+    </div>
+    </div>
+    <h2 class="title">latest products</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1633331009623-10915ddb2d83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="no picture">
+            <h3>White-headrest bed</h3>
+            <h3>ksh 50000</h3>
+            <a class="add-cart cart8" href="#">Add cart</a>   
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1632829401795-2745c905ac77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80" alt="no picture">
+            <h3>simple bed</h3>
+            <h3>ksh 15000</h3>
+            <a class="add-cart cart9" href="#">Add cart</a>   
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1632210702485-e1841e30752a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80" alt="no picture">
+            <h3>Tourist bed</h3>
+            <h3>ksh 18000</h3>
+            <a class="add-cart cart10" href="#">Add cart</a>   
+        </div>
+        <div class="col-4">
+            <img src="https://images.unsplash.com/photo-1632143696877-c7c0d4ae5cc3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80" alt="no picture">
+            <h3>Prison bed</h3>
+            <h3>ksh 1000</h3>
+            <a class="add-cart cart11" href="#">Add cart</a>   
+        </div>
+    </div>
+    <script src='index.js'></script>
+</div>
+</body>
+</html>
