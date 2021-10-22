@@ -102,29 +102,33 @@ function cartNumbers(product){
   if (productNumbers){ // check if product number is in local storage 
     localStorage.setItem('cartNumbers', productNumbers + 1); // if present add 1 to product item instance
     document.querySelector('.cart span').textContent = productNumbers + 1;
+    document.querySelector('.quantity span').textContent = productNumbers + 1;
+    //console.log(document.querySelector('.cart span').parentNode)
   } else {
   localStorage.setItem('cartNumbers',1);// else set the initial value to 1
   document.querySelector('.cart span').textContent = 1;
+  document.querySelector('.quantity span').textContent = 1;
+
   }
   setItems(product)
 }
 
 function setItems(product){
-  let cartItems = localStorage.getItem('productsInCart');// gets item already in loacl storage 
+  let cartItems = localStorage.getItem('productsInCart');// gets item already in local storage 
   cartItems = JSON.parse(cartItems);//converting it to js object from string
 
   if (cartItems != null){// distinguishing different product than the first one we clicked on
 
-    if (cartItems[product.tag] == undefined) { //update cart item to be an object : using previous data in cart item add new product
+    if (cartItems[product.id] == undefined) { //update cart item to be an object : using previous data in cart item add new product
       cartItems = {
-        ...cartItems,[product.tag]:product//spread and ad new product to existing json
+        ...cartItems,[product.id]:product//spread and ad new product to existing json
       }
     }
-    cartItems[product.tag].incart += 1 ;// check if the value in storage exists; if present add 1
+    cartItems[product.id].incart += 1 ;// check if the value in storage exists; if present add 1
   } else {
       product.incart = 1;// set default of value incart when first clicked
       cartItems = {
-        [product.tag]:product
+        [product.id]:product
       }
   }
   localStorage.setItem('productsInCart', JSON.stringify(cartItems)); // placing one instance product object to local storage
@@ -171,7 +175,7 @@ function displayCart(){
   let totalContainer = document.querySelector(".cart-total");
 
   let cartCost = localStorage.getItem("totalCost");
-console.log(cartItems);
+
   if (cartItems && productContainer){
     productContainer.innerHTML ='';//load no html at first
     Object.values(cartItems).map(item => {// next time add html without overridding existing (+=)
@@ -210,10 +214,19 @@ onLoadCartNumbers();
 displayCart();
 
 
-let plus = document.querySelectorAll(".fas")
+let plus = document.querySelectorAll(".fa-plus-circle")
+let minus = document.querySelectorAll(".fa-minus-circle")
 
 plus.forEach(element => {
   element.addEventListener("click", (e)=>{
-    console.log(e.target.parentNode.id);
+    let key = e.target.parentNode.id;
+    cartNumbers(product[key-1])
   })
 });
+
+// minus.forEach(element => {
+//   element.addEventListener("click", (e)=>{
+//     let key = e.target.parentNode.id;
+//     cartNumbers(product[key-1])
+//   })
+// });
