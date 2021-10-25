@@ -1,8 +1,10 @@
 
+
+
 let carts = document.querySelectorAll('.add-cart');
 //localStorage.removeItem("productsInCart");
 // get all carts from html
-let product =[
+const product =[
   {
     id: 1,
     name:'Brown Bed',
@@ -102,12 +104,12 @@ function cartNumbers(product){
   if (productNumbers){ // check if product number is in local storage 
     localStorage.setItem('cartNumbers', productNumbers + 1); // if present add 1 to product item instance
     document.querySelector('.cart span').textContent = productNumbers + 1;
-    document.querySelector('.quantity span').textContent = productNumbers + 1;
+    //document.querySelector('.quantity span').textContent = productNumbers + 1;
     //console.log(document.querySelector('.cart span').parentNode)
   } else {
   localStorage.setItem('cartNumbers',1);// else set the initial value to 1
   document.querySelector('.cart span').textContent = 1;
-  document.querySelector('.quantity span').textContent = 1;
+  //document.querySelector('.quantity span').textContent = 1;
 
   }
   setItems(product)
@@ -132,6 +134,11 @@ function setItems(product){
       }
   }
   localStorage.setItem('productsInCart', JSON.stringify(cartItems)); // placing one instance product object to local storage
+  // if (product == []){
+  //   cartItems = {}
+  //   localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+  // }
+  
   // as a json object
 
 }
@@ -214,8 +221,8 @@ onLoadCartNumbers();
 displayCart();
 
 
-let plus = document.querySelectorAll(".fa-plus-circle")
-let minus = document.querySelectorAll(".fa-minus-circle")
+const plus = document.querySelectorAll(".fa-plus-circle")
+// let minus = document.querySelectorAll(".fa-minus-circle")
 
 plus.forEach(element => {
   element.addEventListener("click", (e)=>{
@@ -223,6 +230,13 @@ plus.forEach(element => {
     cartNumbers(product[key-1])
   })
 });
+// let reset = document.querySelectorAll(".fa-window-close")
+// reset.forEach(element => {
+//   element.addEventListener("click", (e)=>{
+//     let key = e.target.parentNode.id;
+//     cartNumbers([])
+//   })
+// });
 
 // minus.forEach(element => {
 //   element.addEventListener("click", (e)=>{
@@ -230,3 +244,21 @@ plus.forEach(element => {
 //     cartNumbers(product[key-1])
 //   })
 // });
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+// // end of carousel
